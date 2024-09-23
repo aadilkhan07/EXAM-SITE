@@ -22,7 +22,8 @@ function Signin() {
 
   return (
     <div className="auth-container"> {/* Apply auth-container class */}
-      <h2 className="auth-header">Signin</h2> {/* Apply auth-header class */}
+     <h2 className="auth-header">Signin</h2> {/* Apply auth-header class */}
+    
       <form className="auth-form" onSubmit={handleSubmit}> {/* Apply auth-form class */}
         <label>
           Email:
