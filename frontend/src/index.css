@@ -1,6 +1,15 @@
-  /* Auth.css */
+/* Existing Auth.css Code */
 
-  .auth-container {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-color: #0e0e0e; /* Optional: dark background */
+}
+.auth-container {
+  
     max-width: 400px;
     margin: auto;
     padding: 20px;
@@ -8,40 +17,115 @@
     border-radius: 5px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .auth-header {
+.auth-header {
     text-align: center;
     margin-bottom: 20px;
-  }
+}
 
-  .auth-form {
+.auth-form {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .auth-form label {
-    margin-bottom: 10px;
-  }
+.auth-form label {
+  display: block; /* Make label appear above input */
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: white; /* Optional: change color to match the theme */
+}
 
-  .auth-form input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-  }
+.auth-form input {
+  width: 100%; /* Make input fields take full width */
+  padding: 10px;
+  margin-bottom: 20px; /* Adjust the spacing between inputs */
+  border: 1px solid #444; /* Darker border */
+  border-radius: 5px;
+  background-color: #222; /* Dark background for the input */
+  color: white; /* White text for input */
+  font-size: 16px;
+}
 
-  .auth-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+.auth-form button {
+  
+  align-items: center;
+  width: 100%; /* Make button take full width */
+  background-color: #007bff; /* Primary blue color for button */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
 
-  .auth-form button:hover {
-    background-color: #0056b3;
-  }
+.auth-form button:hover {
+  background-color: #0056b3; /* Slightly darker on hover */
+}
+
+/* New Dark Theme Additions */
+
+body {
+    background-color: #0e0e0e; /* Dark background */
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+.auth-container {
+    background-color: #1e1e2a; /* Dark background for container */
+    border: none; /* Remove old border */
+    border-radius: 10px; /* Make corners more rounded */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Strong shadow */
+    padding: 40px; /* Increase padding for modern look */
+}
+
+.auth-header h1 {
+    color: #66a0ff; /* Bright blue for title */
+    font-size: 24px;
+}
+
+.auth-header p {
+    color: #aaa; /* Light grey subheading */
+    font-size: 14px;
+}
+
+.auth-form input {
+    background-color: #2a2a3a; /* Dark input background */
+    color: #fff; /* White text */
+    border: none; /* Remove old border */
+    border-radius: 6px; /* More rounded */
+    padding: 12px; /* Increase padding */
+}
+
+.auth-form input:focus {
+    outline: 2px solid #66a0ff; /* Blue focus outline */
+}
+
+.auth-form button {
+    background-color: #2e6ee9; /* Blue button */
+    padding: 15px; /* Increase button size */
+    font-size: 18px;
+    border-radius: 8px; /* Rounder corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.auth-form button:hover {
+    background-color: #5b9eff; /* Light blue on hover */
+}
+
+.auth-form button:active {
+    background-color: #1e50b3; /* Dark blue on active */
+}
+
+.auth-footer {
+    margin-top: 20px;
+    color: #aaa; /* Light grey footer text */
+}
+
+.auth-footer a {
+    color: #66a0ff; /* Blue links */
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
