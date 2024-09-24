@@ -21,7 +21,7 @@ function Signup() {
       <h2 className="auth-header">Signup</h2> {/* Apply auth-header class */}
       <form className="auth-form" onSubmit={handleSubmit}> {/* Apply auth-form class */}
         <label>
-          Email:
+          Email:    
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </label>
         <label>
