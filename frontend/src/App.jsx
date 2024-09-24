@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Signin from './components/signin';
 import Signup from './components/signup';
 import './index.css';
+import HeroPage from './pages/heroPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
+          
         </Routes>
       </div>
     </Router>
