@@ -1,22 +1,28 @@
-const jwt = require("jsonwebtoken");
-const JWT_SECRET = "s3cret";
+require('dotenv').config()
+const jwt = require('jsonwebtoken');
+const authMiddleware = (req , res , next) => {
+    const authHeader = req.headers.authorization;
 
-function auth(req, res, next) {
-    const token = req.headers.authorization;
-
-    const response = jwt.verify(token, JWT_SECRET);
-
-    if (response) {
-        req.userId = response.id;
-        next();
-    } else {
-        res.status(403).json({
-            message: "Incorrect creds"
-        })
+    if(!authHeader || !authHeader.startsWith('Bearer')){
+        return res.status(403).json({
+            message: "Authorization failed"
+        });
     }
+
+
+const token  = authHeader.split('')[1];
+
+try{
+    const decoded = jwt.verify(token ,  process.env.JWT_SECRET);
+
+    req.userId = decoded.userId;
+
+    next();
+}catch(error){
+    res.status(403).json({});
 }
+};
 
 module.exports = {
-    auth,
-    JWT_SECRET
+    authMiddleware
 }
